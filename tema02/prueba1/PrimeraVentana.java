@@ -8,6 +8,7 @@ public class PrimeraVentana extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
         this.getContentPane().setBackground(Color.orange);
+        setLocationRelativeTo(null);
     }
 
     public static void main(String[] args) {
