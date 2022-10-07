@@ -20,6 +20,7 @@ public class windowButton extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         button1.addActionListener(new EscuchadoraBoton());
+        addWindowListener(new EscuchadorVentana());
     }
 
     public static void main(String[] args) {
