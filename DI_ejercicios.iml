@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tema02/generales/BorderLayout" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tema02/generales/FlowLayout" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tema02/generales/ventanaBoton" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tema02/prueba2/dos" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tema02/prueba2/uno" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tema02/ventanaBoton" isTestSource="false" />
     </content>
