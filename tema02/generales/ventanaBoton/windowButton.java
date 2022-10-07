@@ -18,6 +18,8 @@ public class windowButton extends JFrame {
         setSize(200, 100);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        button1.addActionListener(new EscuchadoraBoton());
     }
 
     public static void main(String[] args) {
