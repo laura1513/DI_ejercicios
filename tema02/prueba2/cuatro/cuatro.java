@@ -34,12 +34,6 @@ public class cuatro extends JFrame {
         setLocationRelativeTo(null);
     }
     public static void main(String[] args) {
-        /*Scanner read = new Scanner(System.in);
-        System.out.print("Introduce the temperature in Celsius and i " +
-                "will show you in Fahrenheit: ");
-        celsius = read.nextFloat();
-
-        System.out.println("Celsius: "+celsius+"\nFahrenheit: "+fahrenheit);*/
         cuatro app = new cuatro();
     }
 }
