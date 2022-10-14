@@ -13,8 +13,15 @@ public class Calcular implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         float f;
         float c;
-        c = Float.parseFloat(this.cels.getText());
-        f = (float) (c*1.8)+32;
-        this.fahr.setText(Float.toString(f));
+        String s = (String)e.getActionCommand();
+        if (s.equals("A Fahrenheit")) {
+            c = Float.parseFloat(this.cels.getText());
+            f = (float) (c*1.8)+32;
+            this.fahr.setText(Float.toString(f));
+        } else if (s.equals("A Celsius")) {
+            f = Float.parseFloat(this.fahr.getText());
+            c = (f - 32f)/1.8f;
+            this.cels.setText(Float.toString(c));
+        }
     }
 }
