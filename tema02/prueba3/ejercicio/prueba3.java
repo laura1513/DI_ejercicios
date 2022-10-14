@@ -4,7 +4,6 @@ import java.io.*;
         import java.util.ArrayList;
         import java.util.HashMap;
         import java.util.Scanner;
-
 public class prueba3 {
     public static class Persona implements Serializable {
 
