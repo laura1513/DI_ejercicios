@@ -14,6 +14,7 @@ public class Calcular implements ActionListener {
         float f;
         float c;
         String s = (String)e.getActionCommand();
+        //Apuntes UCM
         if (s.equals("A Fahrenheit")) {
             c = Float.parseFloat(this.cels.getText());
             f = (float) (c*1.8)+32;
