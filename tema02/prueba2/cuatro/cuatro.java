@@ -1,7 +1,5 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
-import java.util.Scanner;
 
 public class cuatro extends JFrame {
     private Container panel;
@@ -21,7 +19,7 @@ public class cuatro extends JFrame {
         cels = new JLabel("Celsius:");
         buttonCF = new JButton("A Fahrenheit");
         buttonFC = new JButton("A Celsius");
-        cerrar = new JButton("Cerrar");
+        cerrar = new JButton("CerrarVentana");
         setLayout(new FlowLayout());
         setSize(340,400);
         tempCelsius = new JTextField(5);

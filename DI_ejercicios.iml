@@ -18,6 +18,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tema02/prueba2/tres" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tema02/prueba3" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tema02/prueba3/ejercicio" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tema02/prueba4" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
