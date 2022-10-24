@@ -31,6 +31,12 @@ public class VFormulario extends JFrame {
     private JRadioButton rbGeneroM;
     private JLabel lErrorGenero;
     private ButtonGroup bgGenero;
+    private JLabel lPassword;
+    private JPasswordField pfPassword;
+    private JLabel lErrorPassword;
+    private JLabel lRepitePassword;
+    private JPasswordField pfReitePassword;
+    private JLabel lErrorRepitePassword;
 
 
     public VFormulario() {
@@ -135,13 +141,35 @@ public class VFormulario extends JFrame {
         rbGeneroM.setBounds(100, 260, 50, 20);
         lErrorGenero = new JLabel("Debes seleccionar uno");
         lErrorGenero.setForeground(Color.red);
-        lErrorGenero.setBounds(10, 280, 300, 20);
+        lErrorGenero.setBounds(10, 280, 200, 20);
         bgGenero.add(rbGeneroF);
         bgGenero.add(rbGeneroM);
         add(lGenero);
         add(rbGeneroF);
         add(rbGeneroM);
         add(lErrorGenero);
+
+        lPassword = new JLabel("Contraseña");
+        lPassword.setBounds(180, 260, 150, 20);
+        pfPassword = new JPasswordField("", 20);
+        pfPassword.setBounds(260, 260, 100, 20);
+        lErrorPassword = new JLabel("Debes introducir una contraseña");
+        lErrorPassword.setForeground(Color.red);
+        lErrorPassword.setBounds(180, 280, 200, 20);
+        add(lPassword);
+        add(pfPassword);
+        add(lErrorPassword);
+
+        lRepitePassword = new JLabel("Repite la contraseña");
+        lRepitePassword.setBounds(400, 260, 150, 20);
+        pfReitePassword = new JPasswordField("");
+        pfReitePassword.setBounds(540, 260, 100, 20);
+        lErrorRepitePassword = new JLabel("Contraseña incorrecta");
+        lErrorRepitePassword.setForeground(Color.red);
+        lErrorRepitePassword.setBounds(400, 280, 200, 20);
+        add(lRepitePassword);
+        add(pfReitePassword);
+        add(lErrorRepitePassword);
 
         setLayout(null);
         setResizable(false);
