@@ -11,6 +11,28 @@ public class VFormulario extends JFrame {
     private JTextField tfDni;
     private JLabel lDni;
     private JLabel lErrorDni;
+    private JTextField tfDireccion;
+    private JLabel lDireccion;
+    private JLabel lErrorDireccion;
+    private JTextField tfCP;
+    private JLabel lCP;
+    private JLabel lErrorCP;
+    private JTextField tfTelefono;
+    private JLabel lTelefono;
+    private JLabel lErrorTelefono;
+    private JTextField tfCiudad;
+    private JLabel lCiudad;
+    private JLabel lErrorCiudad;
+    private JTextField tfNF;
+    private JLabel lNF;
+    private JLabel lErrorNF;
+    private JLabel lGenero;
+    private JRadioButton rbGeneroF;
+    private JRadioButton rbGeneroM;
+    private JLabel lErrorGenero;
+    private ButtonGroup bgGenero;
+
+
     public VFormulario() {
         super("Formulario");
         setSize(700, 500);
@@ -48,6 +70,78 @@ public class VFormulario extends JFrame {
         add(lDni);
         add(tfDni);
         add(lErrorDni);
+
+        lDireccion = new JLabel("Dirección:");
+        lDireccion.setBounds(195, 80, 100, 20);
+        tfDireccion = new JTextField("" , 80);
+        tfDireccion.setBounds(265, 80, 405, 20);
+        lErrorDireccion = new JLabel("Error en el formato de la direccion");
+        lErrorDireccion.setForeground(Color.red);
+        lErrorDireccion.setBounds(195, 100, 300, 20);
+        add(lDireccion);
+        add(tfDireccion);
+        add(lErrorDireccion);
+
+        lCP = new JLabel("CP:");
+        lCP.setBounds(10, 140, 30, 20);
+        tfCP = new JTextField("", 6);
+        tfCP.setBounds(40, 140, 120, 20);
+        lErrorCP = new JLabel( "Error en el formato del CP");
+        lErrorCP.setForeground(Color.red);
+        lErrorCP.setBounds(10, 160, 300,20);
+        add(lCP);
+        add(tfCP);
+        add(lErrorCP);
+
+        lTelefono = new JLabel("Telefono:");
+        lTelefono.setBounds(200, 140, 200, 20);
+        tfTelefono = new JTextField("", 10);
+        tfTelefono.setBounds(270, 140, 200, 20);
+        lErrorTelefono = new JLabel("Error en el formato del teléfono");
+        lErrorTelefono.setForeground(Color.red);
+        lErrorTelefono.setBounds(200, 160, 300, 20);
+        add(lTelefono);
+        add(tfTelefono);
+        add(lErrorTelefono);
+
+        lCiudad = new JLabel("Ciudad:");
+        lCiudad.setBounds(10, 200, 150, 20);
+        tfCiudad = new JTextField("", 30);
+        tfCiudad.setBounds(70, 200, 150, 20);
+        lErrorCiudad = new JLabel("Error en el formato de la Ciudad");
+        lErrorCiudad.setForeground(Color.red);
+        lErrorCiudad.setBounds(10, 220, 300, 20);
+        add(lCiudad);
+        add(tfCiudad);
+        add(lErrorCiudad);
+
+        lNF = new JLabel("Número de federado:");
+        lNF.setBounds(240, 200, 200, 20);
+        tfNF = new JTextField("", 10);
+        tfNF.setBounds(380, 200, 150, 20);
+        lErrorNF = new JLabel("Error en el formato del número de federado");
+        lErrorNF.setForeground(Color.red);
+        lErrorNF.setBounds(240, 220, 300, 20);
+        add(lNF);
+        add(tfNF);
+        add(lErrorNF);
+
+        bgGenero = new ButtonGroup();
+        lGenero = new JLabel("Sexo:");
+        lGenero.setBounds(10, 260, 100, 20);
+        rbGeneroF = new JRadioButton("F", false);
+        rbGeneroF.setBounds(50, 260, 50, 20);
+        rbGeneroM = new JRadioButton("M", false);
+        rbGeneroM.setBounds(100, 260, 50, 20);
+        lErrorGenero = new JLabel("Debes seleccionar uno");
+        lErrorGenero.setForeground(Color.red);
+        lErrorGenero.setBounds(10, 280, 300, 20);
+        bgGenero.add(rbGeneroF);
+        bgGenero.add(rbGeneroM);
+        add(lGenero);
+        add(rbGeneroF);
+        add(rbGeneroM);
+        add(lErrorGenero);
 
         setLayout(null);
         setResizable(false);
