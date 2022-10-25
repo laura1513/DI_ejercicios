@@ -35,7 +35,7 @@ public class VFormulario extends JFrame {
     private JPasswordField pfPassword;
     private JLabel lErrorPassword;
     private JLabel lRepitePassword;
-    private JPasswordField pfReitePassword;
+    private JPasswordField pfRepitePassword;
     private JLabel lErrorRepitePassword;
     private String[] tipoComp = {"Arbitro", "Entrenador", "Tirador", "Director"};
     private JComboBox<String> cbTipoComp;
@@ -62,6 +62,7 @@ public class VFormulario extends JFrame {
         add(lNombre);
         add(tfNombre);
         add(lErrorNombre);
+        lErrorNombre.setVisible(false);
 
         lApellidos = new JLabel("Apellidos:");
         lApellidos.setBounds(300, 20, 100, 20);
@@ -170,13 +171,13 @@ public class VFormulario extends JFrame {
 
         lRepitePassword = new JLabel("Repite la contraseña");
         lRepitePassword.setBounds(400, 260, 150, 20);
-        pfReitePassword = new JPasswordField("");
-        pfReitePassword.setBounds(540, 260, 100, 20);
+        pfRepitePassword = new JPasswordField("");
+        pfRepitePassword.setBounds(540, 260, 100, 20);
         lErrorRepitePassword = new JLabel("Contraseña incorrecta");
         lErrorRepitePassword.setForeground(Color.red);
         lErrorRepitePassword.setBounds(400, 280, 200, 20);
         add(lRepitePassword);
-        add(pfReitePassword);
+        add(pfRepitePassword);
         add(lErrorRepitePassword);
 
         cbTipoComp = new JComboBox<String>(tipoComp);
@@ -203,6 +204,8 @@ public class VFormulario extends JFrame {
 
         guardar = new JButton("Guardar");
         guardar.setBounds(10, 420, 150, 40);
+        guardar.addActionListener(new Validar(tfNombre, tfApellidos, tfDni, tfDireccion, tfCP, tfTelefono, tfCiudad, tfNF, bgGenero, pfPassword, pfRepitePassword, cbTipoComp, cbTipoHerr, bgComp));
+        guardar.addActionListener(new Validar(lErrorNombre, lErrorApellidos, lErrorDni, lErrorDireccion, lErrorCP, lErrorTelefono, lErrorCiudad, lErrorNF, lErrorGenero, lErrorPassword, lErrorRepitePassword, lErrorCompeticion));
         add(guardar);
 
         salir = new JButton("Salir");
