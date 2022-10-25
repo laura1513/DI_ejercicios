@@ -37,12 +37,20 @@ public class VFormulario extends JFrame {
     private JLabel lRepitePassword;
     private JPasswordField pfReitePassword;
     private JLabel lErrorRepitePassword;
-
-
+    private String[] tipoComp = {"Arbitro", "Entrenador", "Tirador", "Director"};
+    private JComboBox<String> cbTipoComp;
+    private String[] tipoHerramienta = {"Sable", "Espada", "Florete"};
+    private JComboBox<String> cbTipoHerr;
+    private JRadioButton rbCompI;
+    private JRadioButton rbCompE;
+    private JLabel lErrorCompeticion;
+    private ButtonGroup bgComp;
+    private JButton guardar;
+    private JButton salir;
     public VFormulario() {
         super("Formulario");
         setSize(700, 500);
-        setBackground(new Color(137, 180, 232));
+        getContentPane().setBackground(new Color(187, 252, 198));
 
         lNombre = new JLabel("Nombre:");
         lNombre.setBounds(10, 20, 100, 20);
@@ -170,6 +178,36 @@ public class VFormulario extends JFrame {
         add(lRepitePassword);
         add(pfReitePassword);
         add(lErrorRepitePassword);
+
+        cbTipoComp = new JComboBox<String>(tipoComp);
+        cbTipoComp.setBounds(10, 320, 100, 20);
+        add(cbTipoComp);
+
+        cbTipoHerr = new JComboBox<>(tipoHerramienta);
+        cbTipoHerr.setBounds(150, 320, 100, 20);
+        add(cbTipoHerr);
+
+        bgComp = new ButtonGroup();
+        rbCompI = new JRadioButton("Competición individual", false);
+        rbCompI.setBounds(300, 320, 170, 20);
+        rbCompE = new JRadioButton("Competición por equipos", false);
+        rbCompE.setBounds(470, 320, 200, 20);
+        bgComp.add(rbCompI);
+        bgComp.add(rbCompE);
+        lErrorCompeticion = new JLabel("Debes seleccionar una opción");
+        lErrorCompeticion.setForeground(Color.RED);
+        lErrorCompeticion.setBounds(300, 340, 300, 20);
+        add(rbCompI);
+        add(rbCompE);
+        add(lErrorCompeticion);
+
+        guardar = new JButton("Guardar");
+        guardar.setBounds(10, 420, 150, 40);
+        add(guardar);
+
+        salir = new JButton("Salir");
+        salir.setBounds(530, 420, 150, 40);
+        add(salir);
 
         setLayout(null);
         setResizable(false);
