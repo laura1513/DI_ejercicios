@@ -63,7 +63,7 @@ public class Validar implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         //Validación nombre
-        String patNombre = "(\\a-zA-ZñÑáàÁÀéèÉÈíÍóòÓÒúÚ{1,29})";
+        String patNombre = "(\\a-zA-ZñÑáàÁÀéèÉÈíÍóòÓÒúÚ[ ]{1,29})";
         if (tfNombre.getText().isEmpty() && !(patNombre.matches(tfNombre.getText()))) {
             lErrorNombre.setVisible(true);
         } else {
@@ -80,11 +80,23 @@ public class Validar implements ActionListener {
 
         //Validación DNI/NIE
         String patDniNie= "TRWAGMYFPDXBNJZSQVHLCKE";
-        int dni = Integer.parseInt(tfDni.getText().substring(0, tfDni.getText().length()-1));
-        if((tfDni.getText().length()==9) && (tfDni.getText().charAt(tfDni.getText().length()-1) == patDniNie.charAt(dni%23))){
-            lErrorDni.setVisible(false);
-        }else if (tfDni.getText().isEmpty() || (tfDni.getText().length()!=9)) {
+        if(tfDni.getText().length()>0) {
+            int dni = Integer.parseInt(tfDni.getText().substring(0, tfDni.getText().length() - 1));
+            if ((tfDni.getText().length() == 9) && (tfDni.getText().charAt(tfDni.getText().length() - 1) == patDniNie.charAt(dni % 23))) {
+                lErrorDni.setVisible(false);
+            } else {
+                lErrorDni.setVisible(true);
+            }
+        } else {
             lErrorDni.setVisible(true);
+        }
+
+        //Validar dirección
+        String patDireccion = "(\\A-Za-z0-9{1,120})";
+        if (tfDireccion.getText().isEmpty() && !patDireccion.matches(tfDireccion.getText())) {
+            lErrorDirecccion.setVisible(true);
+        } else {
+            lErrorDirecccion.setVisible(false);
         }
     }
 }
