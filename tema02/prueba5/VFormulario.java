@@ -54,7 +54,7 @@ public class VFormulario extends JFrame {
 
         lNombre = new JLabel("Nombre:");
         lNombre.setBounds(10, 20, 100, 20);
-        tfNombre = new JTextField("", 30);
+        tfNombre = new JTextField( 30);
         tfNombre.setBounds(70, 20, 200, 20);
         lErrorNombre = new JLabel("Error en el formato del nombre");
         lErrorNombre.setForeground(Color.red);
@@ -74,6 +74,7 @@ public class VFormulario extends JFrame {
         add(lApellidos);
         add(tfApellidos);
         add(lErrorApellidos);
+        lErrorApellidos.setVisible(false);
 
         lDni = new JLabel("DNI:");
         lDni.setBounds(10, 80, 50, 20);
@@ -85,6 +86,7 @@ public class VFormulario extends JFrame {
         add(lDni);
         add(tfDni);
         add(lErrorDni);
+        lErrorDni.setVisible(false);
 
         lDireccion = new JLabel("Dirección:");
         lDireccion.setBounds(195, 80, 100, 20);
@@ -96,6 +98,7 @@ public class VFormulario extends JFrame {
         add(lDireccion);
         add(tfDireccion);
         add(lErrorDireccion);
+        lErrorDireccion.setVisible(false);
 
         lCP = new JLabel("CP:");
         lCP.setBounds(10, 140, 30, 20);
@@ -107,6 +110,7 @@ public class VFormulario extends JFrame {
         add(lCP);
         add(tfCP);
         add(lErrorCP);
+        lErrorCP.setVisible(false);
 
         lTelefono = new JLabel("Telefono:");
         lTelefono.setBounds(200, 140, 200, 20);
@@ -118,6 +122,7 @@ public class VFormulario extends JFrame {
         add(lTelefono);
         add(tfTelefono);
         add(lErrorTelefono);
+        lErrorTelefono.setVisible(false);
 
         lCiudad = new JLabel("Ciudad:");
         lCiudad.setBounds(10, 200, 150, 20);
@@ -129,6 +134,7 @@ public class VFormulario extends JFrame {
         add(lCiudad);
         add(tfCiudad);
         add(lErrorCiudad);
+        lErrorCiudad.setVisible(false);
 
         lNF = new JLabel("Número de federado:");
         lNF.setBounds(240, 200, 200, 20);
@@ -140,6 +146,7 @@ public class VFormulario extends JFrame {
         add(lNF);
         add(tfNF);
         add(lErrorNF);
+        lErrorNF.setVisible(false);
 
         bgGenero = new ButtonGroup();
         lGenero = new JLabel("Sexo:");
@@ -157,6 +164,7 @@ public class VFormulario extends JFrame {
         add(rbGeneroF);
         add(rbGeneroM);
         add(lErrorGenero);
+        lErrorGenero.setVisible(false);
 
         lPassword = new JLabel("Contraseña");
         lPassword.setBounds(180, 260, 150, 20);
@@ -168,6 +176,7 @@ public class VFormulario extends JFrame {
         add(lPassword);
         add(pfPassword);
         add(lErrorPassword);
+        lErrorPassword.setVisible(false);
 
         lRepitePassword = new JLabel("Repite la contraseña");
         lRepitePassword.setBounds(400, 260, 150, 20);
@@ -179,6 +188,7 @@ public class VFormulario extends JFrame {
         add(lRepitePassword);
         add(pfRepitePassword);
         add(lErrorRepitePassword);
+        lErrorRepitePassword.setVisible(false);
 
         cbTipoComp = new JComboBox<String>(tipoComp);
         cbTipoComp.setBounds(10, 320, 100, 20);
@@ -201,11 +211,11 @@ public class VFormulario extends JFrame {
         add(rbCompI);
         add(rbCompE);
         add(lErrorCompeticion);
+        lErrorCompeticion.setVisible(false);
 
         guardar = new JButton("Guardar");
         guardar.setBounds(10, 420, 150, 40);
-        guardar.addActionListener(new Validar(tfNombre, tfApellidos, tfDni, tfDireccion, tfCP, tfTelefono, tfCiudad, tfNF, bgGenero, pfPassword, pfRepitePassword, cbTipoComp, cbTipoHerr, bgComp));
-        guardar.addActionListener(new Validar(lErrorNombre, lErrorApellidos, lErrorDni, lErrorDireccion, lErrorCP, lErrorTelefono, lErrorCiudad, lErrorNF, lErrorGenero, lErrorPassword, lErrorRepitePassword, lErrorCompeticion));
+        guardar.addActionListener(new Validar(tfNombre, tfApellidos, tfDni, tfDireccion, tfCP, tfTelefono, tfCiudad, tfNF, bgGenero, pfPassword, pfRepitePassword, cbTipoComp, cbTipoHerr, bgComp, lErrorNombre, lErrorApellidos, lErrorDni, lErrorDireccion, lErrorCP, lErrorTelefono, lErrorCiudad, lErrorNF, lErrorGenero, lErrorPassword, lErrorRepitePassword, lErrorCompeticion));
         add(guardar);
 
         salir = new JButton("Salir");
