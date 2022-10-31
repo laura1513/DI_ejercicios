@@ -64,18 +64,26 @@ public class Validar implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         //Validación nombre
         String patNombre = "(\\a-zA-ZñÑáàÁÀéèÉÈíÍóòÓÒúÚ[ ]{1,29})";
-        if (tfNombre.getText().isEmpty() && !(patNombre.matches(tfNombre.getText()))) {
-            lErrorNombre.setVisible(true);
+        if (tfNombre.getText().length() <= 29) {
+            if (tfNombre.getText().isEmpty() && !(patNombre.matches(tfNombre.getText()))) {
+                lErrorNombre.setVisible(true);
+            } else {
+                lErrorNombre.setVisible(false);
+            }
         } else {
-            lErrorNombre.setVisible(false);
+            lErrorNombre.setVisible(true);
         }
 
         //Validación apellidos
         String patApellidos = "(\\a-zA-ZñÑáàÁÀéèÉÈíÍóòÓÒúÚ[ ]{1,60})";
-        if (tfApellidos.getText().isEmpty() && !patApellidos.matches(tfApellidos.getText())) {
-            lErrorApellidos.setVisible(true);
+        if (tfApellidos.getText().length() <= 60) {
+            if (tfApellidos.getText().isEmpty() && !patApellidos.matches(tfApellidos.getText())) {
+                lErrorApellidos.setVisible(true);
+            } else {
+                lErrorApellidos.setVisible(false);
+            }
         } else {
-            lErrorApellidos.setVisible(false);
+            lErrorApellidos.setVisible(true);
         }
 
         //Validación DNI/NIE
@@ -92,11 +100,54 @@ public class Validar implements ActionListener {
         }
 
         //Validar dirección
-        String patDireccion = "(\\A-Za-z0-9{1,120})";
-        if (tfDireccion.getText().isEmpty() && !patDireccion.matches(tfDireccion.getText())) {
-            lErrorDirecccion.setVisible(true);
+        String patDireccion = "(\\a-zA-ZñÑáàÁÀéèÉÈíÍóòÓÒúÚ0-9{1,120})";
+        if (tfDireccion.getText().length() <= 120) {
+            if (tfDireccion.getText().isEmpty() && !patDireccion.matches(tfDireccion.getText())) {
+                lErrorDirecccion.setVisible(true);
+            } else {
+                lErrorDirecccion.setVisible(false);
+            }
         } else {
-            lErrorDirecccion.setVisible(false);
+            lErrorDirecccion.setVisible(true);
         }
+
+        //Validar CP
+        String patCP ="(\\0-9{5})";
+        if (tfCP.getText().length() == 5) {
+            if (tfCP.getText().isEmpty() && !patCP.matches(tfCP.getText())) {
+                lErrorCP.setVisible(true);
+            } else {
+                lErrorCP.setVisible(false);
+            }
+        } else {
+            lErrorCP.setVisible(true);
+        }
+
+        //Validar Telefono
+        String patTelefono = "(\\0-9{9})";
+        if (tfTelefono.getText().length() == 9) {
+            if (tfTelefono.getText().isEmpty() && !patTelefono.matches(tfTelefono.getText())) {
+                lErrorTelefono.setVisible(true);
+            } else {
+                lErrorTelefono.setVisible(false);
+            }
+        } else {
+            lErrorTelefono.setVisible(true);
+        }
+
+        //Validar Ciudad
+        String patCiudad = "(\\a-zA-ZñÑáàÁÀéèÉÈíÍóòÓÒúÚ[ ]{1-30})";
+        if (tfCiudad.getText().length() <= 30) {
+            if (tfCiudad.getText().isEmpty() && !patCiudad.matches(tfCiudad.getText())) {
+                lErrorCiudad.setVisible(true);
+            } else {
+                lErrorCiudad.setVisible(false);
+            }
+        } else {
+            lErrorCiudad.setVisible(true);
+        }
+
+        //Validar NF
+        
     }
 }
