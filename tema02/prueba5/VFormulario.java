@@ -220,6 +220,7 @@ public class VFormulario extends JFrame {
 
         salir = new JButton("Salir");
         salir.setBounds(530, 420, 150, 40);
+        salir.addActionListener(new CerrarFormulario());
         add(salir);
 
         setLayout(null);
