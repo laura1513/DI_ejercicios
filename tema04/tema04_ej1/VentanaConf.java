@@ -16,13 +16,16 @@ public class VentanaConf extends JFrame{
     private JLabel info;
 
     public VentanaConf() {
+        //Configuración de la ventana
         super("Ventana Configuración");
         setContentPane(conf);
         setSize(700,400);
+        //Al hacer clic en aceptar, se abre la ventana VentanaFinal
         aceptar.addActionListener(c -> {
             setVisible(false);
             VentanaFinal vf = new VentanaFinal();
         });
+        //Más configuraciones
         setLocationRelativeTo(null);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -13,16 +13,21 @@ public class VentanaFinal  extends JFrame{
     Timer t;
 
     public VentanaFinal() {
+        //La instalación se completa
         super("Ventana Final");
         progress = new JProgressBar(0, 100);
         progress.setBounds(40,40,160,30);
         progress.setStringPainted(true);
         progress.setValue(0);
         progress.setStringPainted(true);
+
+        //Se finaliza la ejecución de la instalación y abre la ventana VentanaEjecutar
         ejecutar.addActionListener(d -> {
             setVisible(false);
             VentanaEjecutar ve = new VentanaEjecutar();
         });
+
+        //Sale del programa
         salir.addActionListener(e -> {
             System.exit(0);
         });
