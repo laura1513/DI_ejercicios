@@ -2,4 +2,3 @@ VentanaInicial: Explica las condiciones de uso y las acepta
 VentanaConf: Configura las opciones de instalación
 VentanaFinal: ProgressBar del momento de instalación (?), Botón de ejecutar el programa o salir
 VentanaEjecutar: Saldrá un label donde avisará de que el programa está ejecutado
-VentanaBroma: Cuando la ejecución esté en 99%, saldrá que ha habido un error

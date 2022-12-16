@@ -23,6 +23,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tema02/prueba6" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tema03/empaquetar" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tema03/recproductor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tema04/tema04_ej1" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

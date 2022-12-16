@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="VentanaFinal">
-  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="fin" layout-manager="GridLayoutManager" row-count="5" column-count="19" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="448" height="400"/>
     </constraints>
     <properties>
       <background color="-6774853"/>
@@ -12,7 +12,7 @@
     <children>
       <component id="d820" class="javax.swing.JLabel" binding="titulo">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="19" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="Fira Code" size="20" style="1"/>
@@ -20,11 +20,41 @@
           <text value="INSTALACIÓN PROGRAMA"/>
         </properties>
       </component>
-      <vspacer id="4fb21">
+      <component id="f50c7" class="javax.swing.JLabel" binding="inst">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="19" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
-      </vspacer>
+        <properties>
+          <foreground color="-16777216"/>
+          <text value="Instalando..."/>
+        </properties>
+      </component>
+      <component id="a8cec" class="javax.swing.JProgressBar" binding="progress">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="19" vsize-policy="0" hsize-policy="6" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="50"/>
+            <preferred-size width="-1" height="50"/>
+            <maximum-size width="-1" height="50"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="8f517" class="javax.swing.JButton" binding="ejecutar">
+        <constraints>
+          <grid row="3" column="18" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="6" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Ejecutar"/>
+        </properties>
+      </component>
+      <component id="fcf35" class="javax.swing.JButton" binding="salir">
+        <constraints>
+          <grid row="4" column="18" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Salir"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

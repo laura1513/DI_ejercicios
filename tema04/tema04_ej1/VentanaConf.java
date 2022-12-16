@@ -16,7 +16,7 @@ public class VentanaConf extends JFrame{
     private JLabel info;
 
     public VentanaConf() {
-        super("Ventana Principal");
+        super("Ventana Configuración");
         setContentPane(conf);
         setSize(700,400);
         aceptar.addActionListener(c -> {
